@@ -1,0 +1,143 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.section {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff; /* White background for sections */
+}
+
+/* Form Styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-dark-color);
+}
+
+/* Social Media Buttons Styles */
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  color: var(--text-light-color);
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+/* Colors */
+
+/* Primary Colors */
+:root {
+  --primary-color: #3498db; /* Blue */
+  --primary-dark-color: #2980b9; /* Dark Blue */
+}
+
+/* Secondary Colors */
+:root {
+  --secondary-color: #e67e22; /* Orange */
+  --secondary-dark-color: #d35400; /* Dark Orange */
+}
+
+/* Accent Colors */
+:root {
+  --accent-color: #2ecc71; /* Green */
+  --accent-dark-color: #27ae60; /* Dark Green */
+}
+
+/* Text Colors */
+:root {3
+  --text-color: #333; /* Dark Gray */
+  --text-light-color: #fff; /* White */
+}
+
+/* Background Colors */
+:root {
+ background: linear-gradient(to right, #e5ff00, #00eeff, #0000ff);
+  --success-color: #27ae60; /* Success Green */
+  --success-dark-color: #1e8449; /* Dark Success Green */
+}

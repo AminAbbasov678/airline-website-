@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flight Booking System</title>
+
+</head>
+
+<body>
+	<header>
+		<h1>Flight Booking System</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#flight-search">Flight Search</a></li>
+		
+			<li><a href="#payment">Payment</a></li>
+			<li><a href="#services-info">Services & Information</a></li>
+			<li><a href="#about-us">About Us</a></li>
+			<li><a href="#contact-support">Contact & Support</a></li>
+		</ul>
+	</nav>
+
+	<section id="flight-search">
+		<h2>Flight Search</h2>
+		<form id="search-form">
+			<label for="departure">Departure:</label>
+			<input type="text" id="departure" name="departure" required>
+
+			<label for="destination">Destination:</label>
+			<input type="text" id="destination" name="destination" required>
+
+			<label for="departure-date">Departure Date:</label>
+			<input type="date" id="departure-date" name="departure-date" required>
+
+			<label for="passengers">Passengers:</label>
+			<input type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
+
+			<button type="submit" id="search-flights">Search Flights</button>
+		</form>
+	</section>
+
+
+	<section id="payment">
+		<h2>Payment</h2>
+		<form id="payment-form">
+			<label for="card-number">Card Number:</label>
+			<input type="text" id="card-number" name="card-number" required>
+
+			<label for="expiry-date">Expiry Date:</label>
+			<input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+
+			<label for="cvv">CVV:</label>
+			<input type="text" id="cvv" name="cvv" maxlength="3" required>
+
+			<button type="submit" id="pay-now">Pay Now</button>
+		</form>
+	</section>
+
+	<section id="services-info">
+		<h2>Services & Information</h2>
+		<!-- Services and information -->
+		<p>Here you can find details about our airline's services, fleet, routes, policies, baggage allowance, in-flight
+			amenities, and loyalty programs.</p>
+		<!-- Add more detailed information here -->
+	</section>
+
+	<section id="about-us">
+		<h2>About Us</h2>
+		<p>Welcome to our airline! We are committed to providing safe and comfortable travel experiences to our
+			passengers.</p>
+		<p>Our airline was founded in [year], with a mission to [mission statement]. We believe in [values] and strive
+			to uphold them in every aspect of our operations.</p>
+		<p>Contact us at:</p>
+		<ul>
+			<li>Email: info@airline.com</li>
+			<li>Phone: +1-XXX-XXX-XXXX</li>
+			<li>Address: Memar Acəmi metro </li>
+		</ul>
+	
+	</section>
+
+	<section id="contact-support">
+		<h2>Contact & Support</h2>
+		<p>For inquiries and feedback, please fill out the form below:</p>
+		<form id="contact-form">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" rows="4" required></textarea>
+
+			<button type="submit" id="send-message">Send</button>
+		</form>
+		<p>For customer support, you can reach us via:</p>
+		<ul>
+			<li>Live Chat</li>
+			<li>Support Number: +1-XXX-XXX-XXXX</li>
+		</ul>
+	</section>
+
+	<script>
+		document.getElementById('search-flights').addEventListener('click', function () {
+            var departure = document.getElementById('departure').value;
+            var destination = document.getElementById('destination').value;
+            var departureDate = document.getElementById('departure-date').value;
+            var passengers = document.getElementById('passengers').value;
+
+            if (!departure || !destination || !departureDate || !passengers) {
+                alert('Please fill in all fields.');
+            } else {
+                alert('Searching flights...');
+            }
+        });
+
+        document.getElementById('pay-now').addEventListener('click', function () {
+            var cardNumber = document.getElementById('card-number').value;
+            var expiryDate = document.getElementById('expiry-date').value;
+            var cvv = document.getElementById('cvv').value;
+
+            if (!cardNumber || !expiryDate || !cvv) {
+                alert('Please fill in all fields.');
+            } else {
+                alert('Successfully Completed');
+            }
+        });
+
+        document.getElementById('send-message').addEventListener('click', function () {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+            } else {
+                alert('Message successfully sent');
+            }
+        });
+	</script>
+</body>
+
+</html>
